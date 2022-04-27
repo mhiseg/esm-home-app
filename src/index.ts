@@ -18,7 +18,7 @@ function setupOpenMRS() {
     pages: [
       {
         load: getAsyncLifecycle(() => import("./hello"), options),
-        route: "hellos",
+        route: "hello",
       },
     ],
     extensions: [
