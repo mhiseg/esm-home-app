@@ -16,7 +16,7 @@ export default function HomeDashboard({match, canSearch}: HomeDashboardProps){
   return(
     <>
       <div>
-      -------------------------------------
+      ----------On teste le lien symbolic pour mieux faire les choses------------
         <section> On fait quelques petits tests pour mieux comprendre les différentes composantes des modules
         </section>
       </div>
