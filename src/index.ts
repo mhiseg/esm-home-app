@@ -1,48 +1,54 @@
-import {getAsyncLifecycle, defineConfigSchema, registerBreadcrumbs} from '@openmrs/esm-framework';
+import {
+  getAsyncLifecycle,
+  defineConfigSchema,
+  registerBreadcrumbs,
+} from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
 
-const importTranslation = require.context('../translations', false, /.json$/, 'lazy');
+const importTranslation = require.context(
+  "../translations",
+  false,
+  /.json$/,
+  "lazy"
+);
 
-
-function setupOpenMRS(){
-  const moduleName = '@mhiseg/esm-home-app';
-  const pageName = 'home';
+function setupOpenMRS() {
+  const moduleName = "@mhiseg/esm-home-app";
+  const pageName = "home";
 
   const options = {
     featureName: pageName,
-    moduleName
+    moduleName,
   };
 
   defineConfigSchema(moduleName, configSchema);
 
-
   registerBreadcrumbs([
     {
       path: `${window.spaBase}/${pageName}`,
-      title: 'Home'
-    }
+      title: "Home",
+    },
   ]);
 
   return {
     pages: [
       {
-        load: getAsyncLifecycle(() => import('./root.component'), options),
-        route: pageName
-      }
-    ]
-  }
+        load: getAsyncLifecycle(() => import("./root.component"), options),
+        route: pageName,
+      },
+    ],
+    extensions: [
+      {
+        id: "death-management-link",
+        slot: "app-menu-slot",
+        load: getAsyncLifecycle(() => import("./ref/death-link"), options),
+        privilege: "App: death.nurse",
+      },
+    ],
+  };
 }
 
-export {importTranslation, setupOpenMRS};
-
-
-
-
-
-
-
-
-
+export { importTranslation, setupOpenMRS };
 
 //
 //
