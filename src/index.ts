@@ -42,7 +42,7 @@ function setupOpenMRS() {
         id: "death-management-link",
         slot: "app-menu-slot",
         load: getAsyncLifecycle(() => import("./ref/death-link"), options),
-        privilege: "App: death.nurse",
+        privilege: "App: death.management",
       },
     ],
   };
