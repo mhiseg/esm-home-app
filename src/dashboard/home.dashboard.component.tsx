@@ -1,31 +1,27 @@
-import React from 'react';
-import {match} from 'react-router-dom';
-import {useConfig} from '@openmrs/esm-framework';
-import {useTranslation} from 'react-i18next';
-
+import React from "react";
+import { match } from "react-router-dom";
+import { useConfig } from "@openmrs/esm-framework";
+import { useTranslation } from "react-i18next";
 
 export interface HomeDashboardProps {
   match: match;
   canSearch: boolean;
 }
 
-export default function HomeDashboard({match, canSearch}: HomeDashboardProps){
+export default function HomeDashboard({
+  match,
+  canSearch,
+}: HomeDashboardProps) {
   const config = useConfig();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
-  return(
-    <>
-      <div>
-      ----------On teste le lien symbolic pour mieux faire les choses------------
-        <section> On fait quelques petits tests pour mieux comprendre les différentes composantes des modules
-        </section>
-      </div>
+  return (
+    <>      
       <section>
         <svg>
-          <use xlinkHref="#omrs-logo-full-mono"/>
+          <use xlinkHref="#omrs-logo-full-mono" />
         </svg>
       </section>
     </>
   );
-
 }
