@@ -1,5 +1,6 @@
 {
   "casualGreeting": "hey",
   "formalGreeting": "hello",
-  "deathManagement":"Death Management"
+  "Death Management": "Death Management",
+  "System Administration": "System Administration"
 }

@@ -6,13 +6,11 @@ interface RootProps {
   canSearch: boolean;
 }
 
-const Root: React.FC<RootProps> = ({ canSearch = true }) => (
+const Root: React.FC<RootProps> = ({canSearch = true}) => (
   <BrowserRouter basename={window.spaBase}>
-    <Route
-      path="/home"
-      exact
-      component={(props) => <HomeDashboard canSearch={canSearch} {...props} />}
-    />
+    <main>
+      <Route path="/home" exact component={(props) => <HomeDashboard canSearch={canSearch} {...props} />}/>
+    </main>
   </BrowserRouter>
 );
 

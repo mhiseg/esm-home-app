@@ -8,20 +8,8 @@ export interface HomeDashboardProps {
   canSearch: boolean;
 }
 
-export default function HomeDashboard({
-  match,
-  canSearch,
-}: HomeDashboardProps) {
+export default function HomeDashboard({match, canSearch}: HomeDashboardProps) {
   const config = useConfig();
   const { t } = useTranslation();
-
-  return (
-    <>      
-      <section>
-        <svg>
-          <use xlinkHref="#omrs-logo-full-mono" />
-        </svg>
-      </section>
-    </>
-  );
+  return (<section></section>);
 }
