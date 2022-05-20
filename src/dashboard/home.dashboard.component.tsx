@@ -8,8 +8,11 @@ export interface HomeDashboardProps {
   canSearch: boolean;
 }
 
-export default function HomeDashboard({match, canSearch}: HomeDashboardProps) {
+export default function HomeDashboard({
+  match,
+  canSearch,
+}: HomeDashboardProps) {
   const config = useConfig();
   const { t } = useTranslation();
-  return (<section></section>);
+  return <section></section>;
 }
