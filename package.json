@@ -4,7 +4,7 @@
   "license": "MPL-2.0",
   "description": "Home microfrontend",
   "browser": "dist/mhiseg-esm-home-app.js",
-  "repo": "/openmrs/frontend/mhiseg-esm-home-app",
+  "repo": "~/openmrs/openmrs/frontend/mhiseg-esm-home-app",
   "main": "src/index.ts",
   "source": true,
   "scripts": {
