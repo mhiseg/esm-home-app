@@ -28,7 +28,7 @@ export default function DeathManagement() {
         );
       default:
         return (
-          <ConfigurableLink to="${openmrsBase}/spa/death/admin">
+          <ConfigurableLink to="${openmrsBase}/spa/death">
             {t("Death Management")}
           </ConfigurableLink>
         );
