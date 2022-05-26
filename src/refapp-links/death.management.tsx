@@ -16,13 +16,13 @@ export default function DeathManagement() {
     switch (user) {
       case "doctor":
         return (
-          <ConfigurableLink to="${openmrsBase}/spa/death/search">
+          <ConfigurableLink to="${openmrsBase}/spa/death/list-unvalidate">
             {t("Death Management")}
           </ConfigurableLink>
         );
       case "nurse":
         return (
-          <ConfigurableLink to="${openmrsBase}/spa/death/add-patient">
+          <ConfigurableLink to="${openmrsBase}/spa/death/search">
             {t("Death Management")}
           </ConfigurableLink>
         );
