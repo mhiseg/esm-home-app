@@ -44,6 +44,17 @@ function setupOpenMRS() {
         offline: { canSearch: false },
       },
     ],
+    extensions: [
+      {
+        id: "death-management-link",
+        slot: "app-menu-slot",
+        load: getAsyncLifecycle(
+          () => import("./refapp-links/death.management"),
+          options
+        ),
+        privilege: "App: death.management",
+      }
+    ],
   };
 }
 
